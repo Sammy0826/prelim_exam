@@ -1,175 +1,262 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Student Status Cards</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Attendance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
   <style>
-    .card-img-top {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin: auto;
-      margin-top: 15px;
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
     }
-    .card {
-      min-width: 180px;
-      max-width: 180px;
-      margin: 10px;
+    .section-label h2 {
+      margin: 0;
+    }
+    .card-section {
+      margin-bottom: 2rem;
+    }
+    .card-img-top {
+      object-fit: cover;
+      height: 200px;
     }
   </style>
 </head>
-<body class="bg-light">
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+        <img src="image/dct.png" alt="Logo" width="40" height="40" class="me-2">
+      <a class="navbar-brand" href="#">Group No. 10</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="student.html">Students</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="attendance.html">Attendance</a></li>
+          <li class="nav-item"><a class="nav-link" href="form.html">Form</a></li>
+        </ul>
+        <form class="d-flex ms-3" role="search">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-success ms-1" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
-    <img src="https://student.dct.edu.ph//dist/img/DCTLogo2.png" alt="" width="45" height="40">
-  <a class="navbar-brand" href="#"><strong>Group 10</strong></a>
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item"><a class="nav-link" href="students.html">Students</a></li>
-      <li class="nav-item"><a class="nav-link" href="attendance.html">Attendance</a></li>
-      <li class="nav-item"><a class="nav-link" href="form.html">Form</a></li>
-    </ul>
-    <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+  <div class="container my-4">
+    <!-- Students Section -->
+    <div class="card-section">
+      <div class="section-label">
+        <h2 class="text-primary">Students</h2>
+        <span class="badge bg-primary rounded-pill">3</span>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card border-primary">
+            <img src="image/PIC.jpg" class="card-img-top" alt="John Doe’s avatar" />
+            <div class="card-body">
+              <h5 class="card-title">John Doe</h5>
+              <p class="card-text">STUD101001</p>
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Action
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Mark present</a></li>
+                  <li><a class="dropdown-item" href="#">Mark absent</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-primary">
+            <img src="image/PIC.jpg" class="card-img-top" alt="Jane Smith’s avatar" />
+            <div class="card-body">
+              <h5 class="card-title">Jane Smith</h5>
+              <p class="card-text">STU2025002</p>
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Action
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Mark present</a></li>
+                  <li><a class="dropdown-item" href="#">Mark absent</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-primary">
+            <img src="image/PIC.jpg" class="card-img-top" alt="Michael Brown’s avatar" />
+            <div class="card-body">
+              <h5 class="card-title">Michael Brown</h5>
+              <p class="card-text">STU2025003</p>
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Action
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Mark present</a></li>
+                  <li><a class="dropdown-item" href="#">Mark absent</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Present Section -->
+    <div class="card-section">
+      <div class="section-label">
+        <h2 class="text-success">Present</h2>
+        <span class="badge bg-success rounded-pill">3</span>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card border-success">
+            <img src="image/PIC.jpg" class="card-img-top" alt="Chris Johnson’s avatar" />
+            <div class="card-body">
+              <h5 class="card-title">Chris Johnson</h5>
+              <p class="card-text">STU2025005</p>
+              <div class="dropdown">
+                <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Action
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Unmark present</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-success">
+            <img src="image/PIC.jpg" class="card-img-top" alt="David Clark’s avatar" />
+            <div class="card-body">
+              <h5 class="card-title">David Clark</h5>
+              <p class="card-text">STU2025007</p>
+              <div class="dropdown">
+                <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Action
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Unmark present</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-success">
+            <img src="image/PIC.jpg" class="card-img-top" alt="Ryan Martinez’s avatar" />
+            <div class="card-body">
+              <h5 class="card-title">Ryan Martinez</h5>
+              <p class="card-text">STU2025009</p>
+              <div class="dropdown">
+                <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Action
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Unmark present</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Absent Section -->
+    <div class="card-section">
+      <div class="section-label">
+        <h2 class="text-danger">Absent</h2>
+        <span class="badge bg-danger rounded-pill">4</span>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-3">
+          <div class="card border-danger">
+            <img src="image/PIC.jpg" class="card-img-top" alt="Emily Davis’s avatar" />
+            <div class="card-body">
+              <h5 class="card-title">Emily Davis</h5>
+              <p class="card-text">STU2025004</p>
+              <div class="dropdown">
+                <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Action
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Mark present</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card border-danger">
+            <img src="image/PIC.jpg" class="card-img-top" alt="Sarah Lee’s avatar" />
+            <div class="card-body">
+              <h5 class="card-title">Sarah Lee</h5>
+              <p class="card-text">STU2025006</p>
+              <div class="dropdown">
+                <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Action
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Mark present</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card border-danger">
+            <img src="image/PIC.jpg" class="card-img-top" alt="Laura Wilson’s avatar" />
+            <div class="card-body">
+              <h5 class="card-title">Laura Wilson</h5>
+              <p class="card-text">STU2025008</p>
+              <div class="dropdown">
+                <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Action
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Mark present</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card border-danger">
+            <img src="image/PIC.jpg" class="card-img-top" alt="Alice Taylor’s avatar" />
+            <div class="card-body">
+              <h5 class="card-title">Alice Taylor</h5>
+              <p class="card-text">STU2025010</p>
+              <div class="dropdown">
+                <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Action
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Mark present</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</nav>
 
-<div class="container my-5">
-
-
-  <h4 class="mb-3">
-    Students <span class="badge bg-primary">3</span>
-  </h4>
-  <div class="d-flex flex-wrap">
-
-    <div class="card border-primary">
-      <img src="images/PIC.jpg" class="card-img-top" alt="Profile">
-      <div class="card-body text-center">
-        <h6 class="card-title mb-1">Sample</h6>
-        <p class="text-muted small">STU2025001</p>
-        <div class="dropdown">
-          <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-            Action
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">View</a></li>
-            <li><a class="dropdown-item" href="#">Edit</a></li>
-            <li><a class="dropdown-item" href="#">Delete</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="card border-primary">
-      <img src="images/PIC.jpg" class="card-img-top" alt="Profile">
-      <div class="card-body text-center">
-        <h6 class="card-title mb-1">Sample</h6>
-        <p class="text-muted small">STU2025002</p>
-        <div class="dropdown">
-          <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-            Action
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">View</a></li>
-            <li><a class="dropdown-item" href="#">Edit</a></li>
-            <li><a class="dropdown-item" href="#">Delete</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="card border-primary">
-      <img src="dimages/PIC.jpg" class="card-img-top" alt="Profile">
-      <div class="card-body text-center">
-        <h6 class="card-title mb-1">Sample</h6>
-        <p class="text-muted small">STU2025003</p>
-        <div class="dropdown">
-          <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-            Action
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">View</a></li>
-            <li><a class="dropdown-item" href="#">Edit</a></li>
-            <li><a class="dropdown-item" href="#">Delete</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <h4 class="mt-5 mb-3">
-    Present <span class="badge bg-success">2</span>
-  </h4>
-  <div class="d-flex flex-wrap">
-    <div class="card border-success">
-      <img src="images/PIC.jpg" class="card-img-top" alt="Profile">
-      <div class="card-body text-center">
-        <h6 class="card-title mb-1">Sample</h6>
-        <p class="text-muted small">STU2025001</p>
-        <div class="dropdown">
-          <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-            Action
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">View</a></li>
-            <li><a class="dropdown-item" href="#">Edit</a></li>
-            <li><a class="dropdown-item" href="#">Delete</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="card border-success">
-      <img src="images/PIC.jpg" class="card-img-top" alt="Profile">
-      <div class="card-body text-center">
-        <h6 class="card-title mb-1">Sample</h6>
-        <p class="text-muted small">STU2025002</p>
-        <div class="dropdown">
-          <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-            Action
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">View</a></li>
-            <li><a class="dropdown-item" href="#">Edit</a></li>
-            <li><a class="dropdown-item" href="#">Delete</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <br>
-
-  
-  <h4 class="mt-5 mb-3">
-    Absent <span class="badge bg-danger">1</span>
-  </h4>
-  <div class="d-flex flex-wrap">
-    <div class="card border-danger">
-      <img src="images/PIC.jpg" class="card-img-top" alt="Profile">
-      <div class="card-body text-center">
-        <h6 class="card-title mb-1">Sample</h6>
-        <p class="text-muted small">STU2025003</p>
-        <div class="dropdown">
-          <button class="btn btn-danger btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-            Action
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">View</a></li>
-            <li><a class="dropdown-item" href="#">Edit</a></li>
-            <li><a class="dropdown-item" href="#">Delete</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-</div>
-</body>
-</html>
+ 
